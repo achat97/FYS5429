@@ -1,7 +1,7 @@
 # *Detection and Classification of Radar and Sonar Pulses Using a CNN-LSTM Encoder-Decoder*
 
 - Report is found in `Project`
-- All scripts are found in `Src`
+- All scripts are found in `Script`
 - All figures used in the report can be found in `Figures`
 
 ## **Packages**
