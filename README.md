@@ -31,7 +31,7 @@ The targets, `TARGET.npy` and `padded_sequences.npy`, are included.
 
 Run `wav_spectogram.py` to read the `.wav` recording, resample it to 30 kHz, split it into 5 s segments, and z-score normalize each segment. This produces `ocean_noise_segments.npy`, which is **not provided** and must be generated here.
 
-Run `pulses.py` to generate the synthetic dataset. It injects synthetic CW, LFM, and HFM pulses, with modeled transmission loss and reverberation, into the noise segments and writes `INPUT.npy` (the spectrograms) and `TARGET.npy` (the pulse labels). **This step must be run to produce `INPUT.npy`, which is also not provided.** A fixed random seed is used, so the dataset is reproduced exactly.
+Run `pulses.py` to generate the synthetic dataset. It injects synthetic CW, LFM, and HFM pulses, with modeled transmission loss and reverberation, into the noise segments and writes `INPUT.npy` (the spectrograms) and `TARGET.npy` (the pulse labels). **This step must be run to produce `INPUT.npy`, which is also not provided.**
 
 Run `train_model.py` to train the CNN-LSTM encoder-decoder. It reads `INPUT.npy` and `padded_sequences.npy`, trains for 50 epochs, and saves the best checkpoint (by validation loss) along with `train_losses.npy` and `val_losses.npy`. The checkpoint used for the report, `best_model_epoch_20_valloss_0.3393.pth`, is **not provided** and is produced by this step.
 
